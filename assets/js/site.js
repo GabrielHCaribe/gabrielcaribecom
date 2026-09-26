@@ -55,7 +55,7 @@
   }
 
   function hrefFor(collection, item) {
-    return BASE + COLLECTIONS[collection].dir + item.slug + '.html';
+    return BASE + COLLECTIONS[collection].dir + item.slug;
   }
 
   function fillTags(node, tags) {
@@ -66,7 +66,8 @@
   /* ------------------------------------- which entry is this page? */
 
   var here = (function () {
-    var m = /\/(projects|posts)\/([^\/?#]+)\.html?$/i.exec(location.pathname);
+    /* the .html is optional: the deployed site serves extensionless URLs */
+    var m = /\/(projects|posts)\/([^\/?#]+?)(?:\.html?)?$/i.exec(location.pathname);
     if (!m) return null;
 
     var collection = m[1].toLowerCase();

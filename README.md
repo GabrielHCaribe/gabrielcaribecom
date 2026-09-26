@@ -19,16 +19,29 @@ assets/js/main.js             mode toggle, scroll reveals, sticky header
 assets/img/favicon.svg        the orange circle
 assets/img/                   your images go here
 assets/video/                 your videos go here
+vercel.json                   clean URLs — /about, not /about.html
 ```
+
+## URLs
+
+Pages live on disk as `.html` files, but they are served without the
+extension: `about.html` is `/about`, `projects/praxis.html` is
+`/projects/praxis`. That is `"cleanUrls": true` in `vercel.json`; Vercel also
+redirects any old `/about.html` link to `/about`, so nothing shared in the past
+breaks. Links inside the pages are written without the extension to match.
 
 ## Running it locally
 
-Double-clicking `index.html` works. For a proper local server:
+You need a server that resolves those extensionless links — double-clicking
+`index.html` no longer works for navigation, and neither does
+`python -m http.server`.
 
 ```bash
-python -m http.server 8000
-# then open http://localhost:8000
+npx serve .
+# then open http://localhost:3000
 ```
+
+`npx vercel dev` also works and matches production exactly.
 
 ## The two modes
 

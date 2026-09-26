@@ -22,7 +22,8 @@
    FIELDS (projects and posts share most of them)
 
      slug      required. The page's filename without .html, so
-               slug: 'praxis' means projects/praxis.html.
+               slug: 'praxis' means projects/praxis.html, which is
+               served live as /projects/praxis.
      title     shown on the card, as the page's <h1>, and in the
                browser tab.
      summary   one or two sentences. Shown on the card and, unless
