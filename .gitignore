@@ -2,3 +2,5 @@
 Thumbs.db
 _preview-*.html
 _probe*.html
+node_modules/
+.vercel
