@@ -57,7 +57,7 @@ window.SITE_CONTENT = {
       summary: 'Teaching myself robotics through building a quadcopter - components, CAD, and software done from scratch.',
       date: 'Sept. 2026',
       tags: ['Python', 'OnShape', 'Control Systems'],
-      image: 'assets/img/project-one.png',
+      image: 'assets/img/drone.png',
       imageAlt: 'Drone from Scratch project',
       featured: true
     },
