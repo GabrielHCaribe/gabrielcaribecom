@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- EDIT ME: page title + description shown in search results and link previews -->
+<title>Gabriel Caribé</title>
+<meta name="description" content="Placeholder description. Replace with a sentence or two about who you are.">
+
+<meta property="og:title" content="Gabriel Caribé">
+<meta property="og:description" content="Placeholder description.">
+<meta property="og:type" content="website">
+<!-- EDIT ME: add an og image at assets/img/og.png (1200x630) -->
+<!-- <meta property="og:image" content="assets/img/og.png"> -->
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- Applies the saved mode before first paint so there is no flash. -->
+<script>
+  (function () {
+    try {
+      var m = localStorage.getItem('site-mode');
+      if (m === 'fun' || m === 'dark') document.documentElement.setAttribute('data-mode', m);
+    } catch (e) {}
+  })();
+</script>
+
+<!-- EDIT ME: every project and post lives in content.js.
+     site.js builds the cards and page headers from it. -->
+<script src="assets/js/content.js"></script>
+<script src="assets/js/site.js"></script>
+</head>
+
+<body>
+
+<!-- ============ background ============ -->
+<canvas id="space" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ header ============ -->
+<header class="site-header">
+  <div class="shell header-inner">
+    <!-- EDIT ME: your name -->
+    <a class="brand" href="index.html">GabrielCaribé<span>.com</span></a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Writing</a>
+      <a href="about.html" class="nav-hide-sm">About</a>
+      <a href="#hello" class="nav-hide-sm">Say hi</a>
+    </nav>
+
+    <button class="mode-toggle" type="button" aria-pressed="false"
+            title="Switch between dark and fun mode (or press F)">
+      <span class="knob" aria-hidden="true"></span>
+      <span class="label-dark">Dark</span>
+      <span class="label-fun">Fun</span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ hero ============ -->
+  <section class="hero shell" id="top">
+    <div class="hero-copy">
+      <!-- EDIT ME: the <em> picks up the accent gradient -->
+      <h1 class="reveal">
+        <em>Gabriel Carib&eacute;</em>
+      </h1>
+
+      <p class="lede reveal" style="--delay:90ms">
+        Entrepreneurship, Engineering, Physics
+      </p>
+
+      <div class="hero-actions reveal" style="--delay:170ms">
+        <a class="btn btn-primary" href="projects.html">
+          Projects <span class="arrow">&rarr;</span>
+        </a>
+        <a class="btn" href="blog.html">Writing</a>
+      </div>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span class="rail"></span> Scroll
+    </div>
+  </section>
+
+  <!-- ============ projects ============ -->
+  <section class="shell" id="work">
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow">Software and Robotics</p>
+        <h2>Projects</h2>
+      </div>
+      <a class="link-more" href="projects.html">See all <span>&rarr;</span></a>
+    </div>
+
+    <!-- Filled from the `projects` entries in assets/js/content.js that are
+         marked featured: true. Change data-limit to show more or fewer. -->
+    <div class="grid-projects" data-list="projects" data-featured data-limit="3"></div>
+  </section>
+
+  <!-- ============ writing ============ -->
+  <section class="shell" id="writing">
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow">Writings</p>
+        <h2>Featured</h2>
+      </div>
+      <a class="link-more" href="blog.html">Read all <span>&rarr;</span></a>
+    </div>
+
+    <!-- Filled from the `posts` entries in assets/js/content.js that are
+         marked featured: true. -->
+    <div class="post-list" data-list="posts" data-featured data-limit="3"></div>
+  </section>
+
+  <!-- ============ about ============ -->
+  <section class="shell" id="about">
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow"></p>
+        <!-- EDIT ME: your photo, sized to the heading -->
+        <h2 class="with-avatar">
+          <img class="avatar" src="assets/img/me.jpg" alt="Gabriel Carib&eacute;">
+          About me
+        </h2>
+      </div>
+    </div>
+
+    <div class="about-grid">
+      <div class="reveal">
+        <p class="lede">
+          I am a fourth year Engineering Physics student at the University of Toronto, working on Ultrafast Electron Diffraction in Hamburg.
+        </p>
+        <p>
+          I want to make the world a better place through entrepreneurship, physical AI, and applications of physics.
+        </p>
+      </div>
+
+      <!-- EDIT ME: a small, personal "what I'm up to" list.
+           Add or remove rows freely. -->
+      <ul class="currently reveal" style="--delay:120ms">
+        <li><span class="k">Now</span><span class="v">Building and Writing</span></li>
+        <li><span class="k">Learning</span><span class="v">Robotics and Physical AI</span></li>
+        <li><span class="k">Based in</span><span class="v">Hamburg, Germany</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ say hi ============ -->
+  <section class="shell" id="hello">
+    <div class="panel contact-card reveal">
+      <p class="eyebrow">Get in touch</p>
+      <h2>I'm happy to chat!</h2>
+      <p>
+        Feel free to reach out about anything! Jobs, projects, or just a coffee chat.
+      </p>
+
+      <!-- EDIT ME: real email + links -->
+      <a class="btn btn-primary" href="mailto:g.caribe@proton.me">
+        g.caribe@proton.me&rarr;</span>
+      </a>
+
+      <div class="socials">
+        <a href="https://github.com/GabrielHCaribe" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/gabriel-caribe" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://x.com/GabeCaribe" target="_blank" rel="noopener">X</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ footer ============ -->
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <span>&copy; <span id="year">2026</span> Gabriel Carib&eacute;</span>
+    <span>Press <strong>F</strong> for fun mode</span>
+    <a href="#top">Back to top &uarr;</a>
+  </div>
+</footer>
+
+<script src="assets/js/space.js"></script>
+<script src="assets/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

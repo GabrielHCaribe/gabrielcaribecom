@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Projects — Your Name</title>
+<meta name="description" content="Placeholder description for the projects page.">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<script>
+  (function () {
+    try {
+      var m = localStorage.getItem('site-mode');
+      if (m === 'fun' || m === 'dark') document.documentElement.setAttribute('data-mode', m);
+    } catch (e) {}
+  })();
+</script>
+
+<!-- EDIT ME: every project and post lives in content.js.
+     site.js builds the cards and page headers from it. -->
+<script src="assets/js/content.js"></script>
+<script src="assets/js/site.js"></script>
+</head>
+
+<body>
+
+<canvas id="space" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="index.html">GabrielCaribé<span>.com</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="blog.html">Writing</a>
+      <a href="about.html" class="nav-hide-sm">About</a>
+      <a href="index.html#hello" class="nav-hide-sm">Say hi</a>
+    </nav>
+    <button class="mode-toggle" type="button" aria-pressed="false"
+            title="Switch between dark and fun mode (or press F)">
+      <span class="knob" aria-hidden="true"></span>
+      <span class="label-dark">Dark</span>
+      <span class="label-fun">Fun</span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="shell" id="top">
+    <div class="article-header reveal">
+      <p class="eyebrow">My Projects</p>
+      <h1>Things I&rsquo;ve made</h1>
+      <p class="lede">
+        Placeholder &mdash; a sentence about the kind of things you build, and
+        what you were trying to figure out with them.
+      </p>
+    </div>
+
+    <!-- Every project from the `projects` list in assets/js/content.js,
+         in the order they appear there. -->
+    <div class="grid-projects" data-list="projects"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <span>&copy; <span id="year">2026</span> Your Name</span>
+    <span>Press <strong>F</strong> for fun mode</span>
+    <a href="#top">Back to top &uarr;</a>
+  </div>
+</footer>
+
+<script src="assets/js/space.js"></script>
+<script src="assets/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

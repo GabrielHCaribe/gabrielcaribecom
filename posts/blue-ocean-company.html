@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- Title and description are set from this post's entry in
+     assets/js/content.js, matched to this file's name. -->
+<title>GabrielCaribé.com</title>
+<meta name="description" content="">
+
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<script>
+  (function () {
+    try {
+      var m = localStorage.getItem('site-mode');
+      if (m === 'fun' || m === 'dark') document.documentElement.setAttribute('data-mode', m);
+    } catch (e) {}
+  })();
+</script>
+
+<script src="../assets/js/content.js"></script>
+<script src="../assets/js/site.js"></script>
+</head>
+
+<body>
+
+<canvas id="space" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="../index.html">GabrielCaribé<span>.com</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="../projects.html">Projects</a>
+      <a href="../blog.html" aria-current="page">Writing</a>
+      <a href="../about.html" class="nav-hide-sm">About</a>
+      <a href="../index.html#hello" class="nav-hide-sm">Say hi</a>
+    </nav>
+    <button class="mode-toggle" type="button" aria-pressed="false"
+            title="Switch between dark and fun mode (or press F)">
+      <span class="knob" aria-hidden="true"></span>
+      <span class="label-dark">Dark</span>
+      <span class="label-fun">Fun</span>
+    </button>
+  </div>
+</header>
+
+<main class="shell" id="top">
+  <article class="article">
+
+    <!-- ============ post header ============ -->
+    <header class="article-header reveal">
+      <p class="eyebrow"><a href="../blog.html" style="color:inherit">&larr; All writing</a></p>
+      <!-- title, date, read time and tags come from assets/js/content.js -->
+      <h1 data-field="title"></h1>
+      <div class="article-meta">
+        <span data-field="date"></span>
+        <span data-field="readtime"></span>
+        <span class="tags" data-field="tags"></span>
+      </div>
+    </header>
+
+    <!-- ============ post body ============ -->
+    <!-- EDIT ME: everything below is the post. The .prose class styles
+         headings, links, lists, quotes, code and images for you. -->
+    <div class="prose reveal">
+
+      <h2>Overview</h2>
+
+      <p>
+        <i>Blue Ocean Strategy</i> by W. Chan Kim and Renée Maes gives actionable frameworks for building a company strategy that exits the "red ocean" of bloody competition, and enters a "blue ocean" where you dominate the market by creating your own market.
+      </p>
+      <p>General themes from the book: make a strategy canvas to know the state of the industry, then do ......</p>
+
+      <p>Value Innovation: when actions favorably affect cost sstructre and value propositions</p>
+      <ul>
+        <li>Cost savings from eliminating facots an industry competes on</li>
+        <li>Increase buyer value by creating elements industry never offered</li>
+      </ul>
+
+      <p>Blue Ocean: differentiation AND lower costs; looks like when you can say "Not a traditional (...) (eg. Circus)</p>
+
+      <h2>How to Formulate a Blue Ocean Strategy</h2>
+      <ol>
+        <li>Reconstruct market boundaries</li>
+        <li>Focus on Big Picture, not numbers</li>
+        <li>Reach beyond existing demand</li>
+        <li>Get the strategy sequence right</li>
+      </ol>
+
+      <p>"How do I make competition irrelevant?"</p>
+
+      <h3>* Strategy Canvas</h3>
+      <ul>
+        <li>Diagnoses the playing field, shows you where competition is investing and what theyre competing on</li>
+        <li>Is an actionable framework</li>
+      </ul>
+
+      <p>To shift strategy canvas, change strategy focus from <u>competitors</u> to <u>alternatives</u>, and from <u>customers</u> to <u>noncustomers</u> of the industry.</p>
+
+      <h2>4 Actions Framework</h2>
+      <ul>
+        <li><u>Reduce</u>: Which factors should be reduced well below industry standards</li>
+        <li><u>Create</u>: Which factors should be created that the industry has never offered</li>
+        <li><u>Raise</u>: Which factors should be raised well above industry standards</li>
+        <li><u>Eliminate</u>: Which of the factors the industry takes for granted should be eliminated</li>
+      </ul>
+
+      <p>Answering all of these leads to a new value curve</p>
+
+      <p>Fill out the following table:</p>
+
+      <table border="1" style="border-collapse: collapse; width: 100%; margin: 20px auto;">
+        <tr>
+          <td style="padding: 8px; border: 1px solid;">Eliminate
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </td>
+          <td style="padding: 8px; border: 1px solid;">Raise
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border: 1px solid;">Reduce
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </td>
+          <td style="padding: 8px; border: 1px solid;">Create
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+
+      <h2>3 Characteristics of a Good Strategy</h2>
+      <ul>
+        <li>Focus</li>
+        <li>Divergence</li>
+        <li>Compelling Tagline</li>
+      </ul>
+
+      <p>The labels on your strategy canvas should be in terms buyers understand and value</p>
+
+      <h2>* 6 Paths Framework (Reconstructing Market Boundaries)</h2>
+      <p><u>Path 1</u>: Look across alternative industries</p>
+      <p>Alternaties example: restauraunts vs. movie theatres - both are entertainment, each offers value to different people.</p>
+
+      <h3>Ask Yourself:</h3>
+      <ul>
+        <li>What are the alternatives to my industry</li>
+        <li>What do customers trade across them? (Find the best parts and reduce or eliminate everything else)</li>
+      </ul>
+
+      <p><u>Path 2</u>: Look across strategic groups within your industry</p>
+      <p>Strategic groups are generally ranked in higherarchical order baesd on price and performance</p>
+      <ul>
+        <li>Ex. luxury vs. everyday cars</li>
+      </ul>
+
+      <h3>Ask Yourself:</h3>
+      <ul>
+        <li>What are strategic groups in my industry and why do customers trade/change?</li>
+      </ul>
+
+      <p><u>Path 3</u>: Look across the chain of buyers</p>
+      <p>Explain a bit and give the example</p>
+
+      <h3>Ask Yourself:</h3>
+      <ul>
+        <li>How could designing for a different buyer change the product to be more appealing?</li>
+      </ul>
+
+      <p><u>Path 4</u>: Look across complimentary products and service offerings</p>
+      <p>Explain a bit and give the example</p>
+
+      <h3>Ask Yourself:</h3>
+      <ul>
+        <li>What is the context my product is used?</li>
+        <li>What happens before, during, and after?</li>
+        <li>Find pain points and eliminate them</li>
+      </ul>
+
+      <p><u>Path 5</u>: Look across functional or emotional appeal to buyers</p>
+      <p>Explain a bit and give the example</p>
+
+      <h3>Ask Yourself:</h3>
+      <ul>
+        <li>Is my industry functional or emotional and what elements can I switch to be the opposite?</li>
+      </ul>
+
+      <p><u>Path 6</u>: Look across time</p>
+      <p>Look for decisive, irreversible trends that have a clear trajectory (give example)</p>
+      <p>Then, look into the future and ask what would the market look like if the trend were taken to its logical conclusion</p>
+
+      <h3>Ask Yourself:</h3>
+      <ul>
+        <li>How will these trends impact my industry, and how can I use this to open up unprecedented customer utility?</li>
+      </ul>
+
+      <h2>2. Focusing on the Big Picture</h2>
+      <p>Process for Drawing and Discussing Strategy Canvas</p>
+      <ol>
+        <li>Visual Awakening:</li>
+        <ul>
+          <li>Draw the strategy canvas for your business and competitors "as is"</li>
+        </ul>
+        <li>Visual Exploration</li>
+        <ul>
+          <li>Go into the field to explore the 6 paths to creating blue oceans</li>
+          <li>Observe advantages of alternative products and services</li>
+          <li>Decide what to eliminate, create, or change</li>
+        </ul>
+        <li>Visual Strategy Fair</li>
+        <ul>
+          <li>Draw your to-be strategy canvas</li>
+          <li>Get feedback on it from customers, competitors' customers, and non-customers</li>
+          <li>incorperate the feedback</li>
+        </ul>
+        <li>Visual Communication</li>
+        <ul>
+          <li>Distribute before and after strategy profiles on one page for comparison</li>
+          <li>Only support projects that close the gap to your new strategy</li>
+        </ul>
+      </ol>
+
+      <h2>3. Reach Beyond Existing Demand</h2>
+      <p>Explain 1st, 2nd, and 3rd tier non-customers and how to use them</p>
+
+      <h2>4. Get the Strategic Sequence Right</h2>
+      <p>Buyer utility -> Price -> cost -> adoptation</p>
+
+      <hr>
+
+      <p class="muted">
+        Want to discuss? Reach out to me <a href="mailto:g.caribe@proton.me" style="display: inline-block; padding: 8px 16px; background-color: #ff9500; color: white; text-decoration: none; border-radius: 20px; margin-left: 8px;">here →</a>
+      </p>
+
+    </div>
+
+    <!-- ============ post footer ============ -->
+    <footer class="article-footer">
+      <a class="link-more" href="../blog.html"><span>&larr;</span> All writing</a>
+      <a class="link-more" href="#top">Back to top <span>&uarr;</span></a>
+    </footer>
+
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <span>&copy; <span id="year">2026</span> Your Name</span>
+    <span>Press <strong>F</strong> for fun mode</span>
+    <a href="../blog.html">More posts</a>
+  </div>
+</footer>
+
+<script src="../assets/js/space.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

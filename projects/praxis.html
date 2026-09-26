@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- Title and description are set from this project's entry in
+     assets/js/content.js, matched to this file's name. -->
+<title>GabrielCaribé.com</title>
+<meta name="description" content="">
+
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<script>
+  (function () {
+    try {
+      var m = localStorage.getItem('site-mode');
+      if (m === 'fun' || m === 'dark') document.documentElement.setAttribute('data-mode', m);
+    } catch (e) {}
+  })();
+</script>
+
+<script src="../assets/js/content.js"></script>
+<script src="../assets/js/site.js"></script>
+</head>
+
+<body>
+
+<canvas id="space" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="../index.html">GabrielCaribé<span>.com</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="../projects.html" aria-current="page">Projects</a>
+      <a href="../blog.html">Writing</a>
+      <a href="../about.html" class="nav-hide-sm">About</a>
+      <a href="../index.html#hello" class="nav-hide-sm">Say hi</a>
+    </nav>
+    <button class="mode-toggle" type="button" aria-pressed="false"
+            title="Switch between dark and fun mode (or press F)">
+      <span class="knob" aria-hidden="true"></span>
+      <span class="label-dark">Dark</span>
+      <span class="label-fun">Fun</span>
+    </button>
+  </div>
+</header>
+
+<main class="shell" id="top">
+  <article class="article">
+
+    <header class="article-header reveal">
+      <p class="eyebrow"><a href="../projects.html" style="color:inherit">&larr; All projects</a></p>
+      <!-- title, date and tags come from assets/js/content.js -->
+      <h1 data-field="title"></h1>
+      <div class="article-meta">
+        <span data-field="date"></span>
+        <span class="tags" data-field="tags"></span>
+      </div>
+    </header>
+
+    <!-- EDIT ME: hero shot. Replace with <img src="../assets/img/..." alt="..."> -->
+    <div class="figure-placeholder">
+      <div class="thumb"><img src="../assets/img/praxis2.png" alt="Praxis App"></div>
+    </div>
+
+    <!-- EDIT ME: the spec sheet. Add or drop rows freely. -->
+    <ul class="meta-list reveal">
+      <li><span class="k">Timeline</span><span class="v">July 2026 to Present</span></li>
+      <li><span class="k">Built with</span><span class="v"> Expo + React Native (mobile) &middot; Web (React) &middot; Supabase (backend/auth)</span></li>
+      <li><span class="k">Links</span><span class="v"><a href="https://usepraxis.ca/" target="_blank" rel="noopener">usepraxis.ca</a> &middot; <span>App Store</span> &middot; <a href="https://github.com/GabrielHCaribe/Accountability_App" target="_blank" rel="noopener" title="GitHub repository"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/github.svg" alt="GitHub" width="16" height="16" style="display:inline-block;vertical-align:-3px;filter:invert(1)"></a></span></li>
+    </ul>
+
+    <div class="prose reveal">
+
+      <p>I was a procrastination demon, and my go-to method; YouTube. I could not find a good way to consistently stay off that app when times got stressful, so I decided to build a solution that I knew would work for me. </p>
+      <p>This led to Praxis, an iPhone app that listens to your goals, blocks out time for you to work on them, holds you accountable, and will not let you get distracted by blocking all other apps during your work periods. </p>
+
+      <h2>What Will Actually Help People?</h2>
+      <p>This was my first mobile app, so on top of not knowing anything about app design, I didn't even know what people needed to stay focused isntead of getting distracted by social media</p>
+      <p>Before building anything, I conducted a series of interviews with people I could see using the app to ask them about their habits, what enables or prevents them from reaching their goals, and what kinds of apps they would download if they came across</p>
+
+      <h2>The Build</h2>
+      <p>The app took around a month and a half to launch. It was fully vibe-coded using Claude Code.</p>
+      <p>My process was not very efficient - I was exceited to just have something rather than something good, so I didn't do much planning and started by building what I initially thought I wanted to app to be. This made it so that I had to go back through and redo a lot of it. To a certain point this is necesary since you don't know exactly how something will work until you have it, but my process could definetly be improved by planning a bit more before starting the build</p>
+      <p>Just as how Burger King's strategy for choosing a location was to go wherever McDonald's was going, off-loading all the research to their competitor, I tried immitating big apps (like google calendar) as much as possible.</p>
+      <p>Submitting to the App Store took a but of trial and error, but that only delayed the launch by about a week. I documented my advice for App Store submissions in my <a href="../posts/app-store-guide.html" target="_blank" rel="noopener">App Store Submissions Guide</a>.</p>
+
+      <div class="figure-placeholder">
+        <div class="thumb"><img src="../assets/img/tiktok.png" alt="TikTok Profile"></div>
+      </div>
+
+      <h2>Marketing</h2>
+      <p>This app gave me my first marketing experience. I set up TikTok and Youtube accounts to create short-form content to gain users. I accumulated a couple thousand views between the two platforms, but didn't manage to convert many people. </p>
+      <p>Some challenges I had were managing time between improving the app and creating videos to market it, and not knowing how to actually make engaging content since I have never done it before. I definitly saw that the best way to learn is by doing, so when I need to market again, I know to make lots of videos and try to improve one thing each time. </p>
+      <p>When people ask Mr. Beast advice on how to make better videos, he just tells them to make 100 videos first and then he'll help them. He says that nobody return to him because 95% of people don't care enough to make the 100 videos, and the 5% who do learn how to make better videos by posting 100 times.</p>
+
+      <h2>What I learned</h2>
+      <p>This was my first go at entrepreneurship, so there is lots that I would do differently and keep in mind for next time.</p>
+      <h3>80-20 Rule</h3>
+      <p>80% of your results normally come from 20% of your work. For early stage app/business development when speed is a priority, I need to focus on the 20% more. I found it easy to get distracted to do work that on the surface level seems productive, but really was just a waste of time. </p>
+      <p>Things like spending hours getting the aestetics right rather than going to a university campus and talking directly to students to practice selling. The 20% is the hard stuff that I like to avoid, so a rule I will follow is if it makes me unconfortable, then I need to do it first.</p>
+      <h3>Embrace Rejection</h3>
+      <p>I have had a big fear of rejection my whole life. This app showed me that having a fear of rejection is a good way at getting zero users and zero feedback</p>
+      <p>I need to seek out rejection since it is the only way I will learn how to sell and create oportunities to connect with cool and ambitious people. I've made first steps at getting over this fear by askking for discounts when I buy things, knowing the answer will likley be no, and using that to desensitize myself</p>
+      <h3>Talk To As Many People As Possible</h3>
+      <p>This point is similar to the last one, but I need to talk to more people and gain more feedback. I found myself guessing a lot about what features to have and how they should work, even after all my initial interviews. Next time, instead of guessing, I need to launch, ask, and iterate, as quickly and often as possible.</p>
+    </div>
+
+    <div class="figure-placeholder">
+        <div class="thumb"><img src="../assets/img/praxis.png" alt="Praxis Logo"></div>
+      </div>
+
+    <footer class="article-footer">
+      <a class="link-more" href="../projects.html"><span>&larr;</span> All projects</a>
+      <!-- the next project in content.js, linked automatically -->
+      <span data-field="next"></span>
+    </footer>
+
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <span>&copy; <span id="year">2026</span> Gabriel Caribé</span>
+    <span>Press <strong>F</strong> for fun mode</span>
+    <a href="../projects.html">More projects</a>
+  </div>
+</footer>
+
+<script src="../assets/js/space.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

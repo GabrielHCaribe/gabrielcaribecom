@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- Title and description are set from this post's entry in
+     assets/js/content.js, matched to this file's name. -->
+<title>GabrielCaribé.com</title>
+<meta name="description" content="">
+
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<script>
+  (function () {
+    try {
+      var m = localStorage.getItem('site-mode');
+      if (m === 'fun' || m === 'dark') document.documentElement.setAttribute('data-mode', m);
+    } catch (e) {}
+  })();
+</script>
+
+<script src="../assets/js/content.js"></script>
+<script src="../assets/js/site.js"></script>
+</head>
+
+<body>
+
+<canvas id="space" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="../index.html">GabrielCaribé<span>.com</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="../projects.html">Projects</a>
+      <a href="../blog.html" aria-current="page">Writing</a>
+      <a href="../about.html" class="nav-hide-sm">About</a>
+      <a href="../index.html#hello" class="nav-hide-sm">Say hi</a>
+    </nav>
+    <button class="mode-toggle" type="button" aria-pressed="false"
+            title="Switch between dark and fun mode (or press F)">
+      <span class="knob" aria-hidden="true"></span>
+      <span class="label-dark">Dark</span>
+      <span class="label-fun">Fun</span>
+    </button>
+  </div>
+</header>
+
+<main class="shell" id="top">
+  <article class="article">
+
+    <header class="article-header reveal">
+      <p class="eyebrow"><a href="../blog.html" style="color:inherit">&larr; All writing</a></p>
+      <!-- title, date, read time and tags come from assets/js/content.js -->
+      <h1 data-field="title"></h1>
+      <div class="article-meta">
+        <span data-field="date"></span>
+        <span data-field="readtime"></span>
+        <span class="tags" data-field="tags"></span>
+      </div>
+    </header>
+
+    <div class="prose reveal">
+
+      <p class="lede">
+        Submitting an app to the App Store can feel like throwing your carefully crafted work into a black box. Here's what I learned navigating the submission process for the first time, so you don't have to repeat my mistakes.
+      </p>
+
+      <h2>Before You Submit</h2>
+
+      <p>
+        The App Store submission process is strict, but it's predictable if you know what to look for. Apple has clear guidelines, and following them is infinitely easier than trying to argue your way past a rejection. I spent about a week getting rejections before I figured out what I was doing wrong.
+      </p>
+
+      <p>
+        First, read the <a href="https://developer.apple.com/app-store/review/guidelines/" target="_blank" rel="noopener">App Store Review Guidelines</a> completely. Don't skim them. I know, I know, but skimming is what got me three rejections. Specific sections to pay attention to: anything about privacy, permissions, and external links or in-app functionality.
+      </p>
+
+      <h2>The Most Common Rejection Reasons</h2>
+
+      <h3>Privacy and Permissions</h3>
+
+      <p>
+        If your app requests permissions (camera, location, contacts, etc.), you need to explain why in your app's settings. Apple doesn't just want you to ask for the permission—they want to see that your app actually uses it for something the user understands. If you're collecting any data, be explicit about it.
+      </p>
+
+      <p>
+        Also, make sure your privacy policy URL actually works and clearly states what data you collect. If you don't have a privacy policy, you need one.
+      </p>
+
+      <h3>Metadata and Screenshots</h3>
+
+      <p>
+        Your app's icon, screenshots, and description matter more than you'd think. Screenshots should show actual app features, not fake mockups or placeholder images. Use the latest iPhone models in your previews, and make sure your app name and description match what you're actually submitting.
+      </p>
+
+      <p>
+        I learned this the hard way when Apple rejected my app because my description mentioned a feature I was planning to add but hadn't implemented yet. Write your description based on what exists, not what you hope to ship.
+      </p>
+
+      <h3>External Links and Payments</h3>
+
+      <p>
+        If your app has a website or social media links, make sure they work. If you're handling any kind of payment or subscription, Apple has specific rules about how you implement it. In-app purchases must use Apple's In-App Purchase system (with very few exceptions).
+      </p>
+
+      <p>
+        Don't try to circumvent this by directing users to pay on your website or through an external service. Apple will reject it, and honestly, they're right to—it's a security thing.
+      </p>
+
+      <h2>The Submission Itself</h2>
+
+      <p>
+        Once you've triple-checked everything, the submission process is straightforward. Build your app in Xcode, generate the necessary certificates (testflight is your friend for initial testing), and submit through App Store Connect.
+      </p>
+
+      <p>
+        After you submit, Apple typically reviews your app within 24-48 hours. If it's rejected, you'll get a detailed email explaining why. Read it carefully—it's not personal, and it's actionable. Fix the issue and resubmit.
+      </p>
+
+      <h2>The Waiting Game</h2>
+
+      <p>
+        My first submission took about a week to get approved because of three rejections. Each rejection made sense once I understood what Apple was looking for, but the back-and-forth was frustrating. By the fourth submission, everything went through.
+      </p>
+
+      <p>
+        The lesson here is that getting rejected doesn't mean your app is bad—it means Apple needs you to follow their rules. Once you understand those rules, approval is usually straightforward.
+      </p>
+
+      <hr>
+
+      <p class="muted">
+        If you're shipping your first app, be patient with yourself and the process. Most rejections are preventable if you read Apple's guidelines and actually follow them. Good luck out there.
+      </p>
+
+    </div>
+
+    <footer class="article-footer">
+      <a class="link-more" href="../blog.html"><span>&larr;</span> All writing</a>
+      <a class="link-more" href="#top">Back to top <span>&uarr;</span></a>
+    </footer>
+
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <span>&copy; <span id="year">2026</span> Gabriel Caribé</span>
+    <span>Press <strong>F</strong> for fun mode</span>
+    <a href="../blog.html">More posts</a>
+  </div>
+</footer>
+
+<script src="../assets/js/space.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

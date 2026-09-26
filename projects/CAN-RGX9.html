@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- Title and description are set from this project's entry in
+     assets/js/content.js, matched to this file's name. -->
+<title>GabrielCaribé.com</title>
+<meta name="description" content="">
+
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<script>
+  (function () {
+    try {
+      var m = localStorage.getItem('site-mode');
+      if (m === 'fun' || m === 'dark') document.documentElement.setAttribute('data-mode', m);
+    } catch (e) {}
+  })();
+</script>
+
+<script src="../assets/js/content.js"></script>
+<script src="../assets/js/site.js"></script>
+</head>
+
+<body>
+
+<canvas id="space" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="../index.html">GabrielCaribé<span>.com</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="../projects.html" aria-current="page">Projects</a>
+      <a href="../blog.html">Writing</a>
+      <a href="../about.html" class="nav-hide-sm">About</a>
+      <a href="../index.html#hello" class="nav-hide-sm">Say hi</a>
+    </nav>
+    <button class="mode-toggle" type="button" aria-pressed="false"
+            title="Switch between dark and fun mode (or press F)">
+      <span class="knob" aria-hidden="true"></span>
+      <span class="label-dark">Dark</span>
+      <span class="label-fun">Fun</span>
+    </button>
+  </div>
+</header>
+
+<main class="shell" id="top">
+  <article class="article">
+
+    <header class="article-header reveal">
+      <p class="eyebrow"><a href="../projects.html" style="color:inherit">&larr; All projects</a></p>
+      <!-- title, date and tags come from assets/js/content.js -->
+      <h1 data-field="title"></h1>
+      <div class="article-meta">
+        <span data-field="date"></span>
+        <span class="tags" data-field="tags"></span>
+      </div>
+    </header>
+
+    <!-- EDIT ME: hero video. Drop the file in ../assets/video/ and swap this block for
+         the markup below. Use class "horizontal" for landscape clips, "vertical" for
+         portrait ones shot on a phone.
+         <div class="figure-placeholder horizontal">
+           <div class="thumb"><video src="../assets/video/your-clip.mp4" autoplay loop muted playsinline preload="metadata" aria-label="..."></video></div>
+         </div> -->
+    <div class="figure-placeholder horizontal">
+      <span class="placeholder-tag">Video 16:9</span>
+    </div>
+
+    <!-- EDIT ME: the spec sheet. Add or drop rows freely. -->
+    <ul class="meta-list reveal">
+      <li><span class="k">Timeline</span><span class="v">December 2025 to September 2026 (analysis still in progress)</span></li>
+      <li><span class="k">Who</span><span class="v">Cristar's CAN-RGX 9 team together with SEDS Canada, the NRC, and the CSA</span></li>
+      <li><span class="k">What</span><span class="v">Laser induced crystalization in 0g and 2g with a Class 4 Glucoloop laser</span></li>
+      <li><span class="k">Links</span><span class="v"><a href="https://www.seds.ca/can-rgx/">SEDS CAN-RGX</a> &middot; <a href="https://www.cbc.ca/player/play/video/9.7339713">CBC article on the Experience</a></span></li>
+    </ul>
+
+    <div class="prose reveal">
+
+      <p class="lede">
+        In September, 2026, I few on the NRC's Falcon 20 to shoot lasers and float around in 0g.
+      </p>
+
+      <h2>Context</h2>
+      <p>I was the Electrical Lead for team Cristar, a Universtiy of Toronto team who participated in the Canadain Reduced Gravity Experiment Challenge (CAN-RGX 9) organized by SEDS Canada. Every year, out of dozens of student teams who submit applications, 4 teams are selected to bring a science experiment onboard the National Research Council's Falcon 20 aircraft to make measuremnts in 0g and 2g. This year, our team won the <b>Overall Excellence Award</b>.</p>
+
+      <p>Our goal was to create protien crystals in 0g and 2g using laser-induced crystalization (shooting a Class 4 laser at a solution to cause crystals to grow quickly) to see if reduced gravity can improve crystal structure on short-duration flights.</p>
+
+      <h2>What we built</h2>
+      <p>Our experiment mainly consisted of the following components:</p>
+      <ul>
+        <li>Glucoloop Ivy Mid-Infrared Nanosecond Laser</li>
+        <li>Zaber linear translation stage and the solution to be crystallized</li>
+        <li>Rapberry Pi 5</li>
+        <li>Humidity, temperature, and acceleration sensors</li>
+        <li>Pelican Case</li>
+        <li>Graphical User Interface</li>
+      </ul>
+
+      <p>The pelican case was the housing for the experiment. Inside, there were 2 levels. The bottom level had the laser which shot photons at a mirror that directed the beam downwards into a well-plate which housed the sample. The well-plate was mounted on a Zaber linear translation stage which moved to place one well at a time under the focus of the laser.</p>
+      <p>The top level held the sensors, dessicant to keep the humidity down, a camera, and the Raspberry Pi which was connected to a laptop outside of the case, through which we controlled the experiment.</p>
+
+      <p>As the electrical lead, I was in charge of initial component selection (stage, camera, sensors, etc.). I also designed the first iteration of the mirror mount and the camera mount in SOLIDWORKS.</p>
+
+      <!-- EDIT ME: another shot, or delete this block -->
+      <div class="figure-placeholder">
+        <span class="placeholder-tag">Image 16:9</span>
+      </div>
+
+      <h2>The Flight</h2>
+      <p>The Falcon 20 does a parabolic flight - it goes up on a steep angle, then down on a steep angle. This means that it experiences a 20s period of hypergravity (~2g), followed by 20s of weightlessness (~0g) when it is levening off and starting to dip, followed by hypergravity again when it is raising out of the dip.</p>
+      <p>2 operators are on board running the experiemnt. Our team has one member controlling the GUI on the laptop - they were the one actually clicking to fire the laser, and the other operator tracked the stage of the flight (how much gravity they were under) to tell the first operator when to fire the laser. On my flight, I was the second operator, and Syeda Mahdia (Engineering Physics at U of T, 2T7) was the first operator.</p>
+
+      <p>Experiencing microgravity was a childhood dream come true. I want to give a huge thank you to the rest of my team: Alexander Wainwright (Team Lead, Physics PhD student), Syeda Mahdia (Science Lead, Engineering Physics), Elias Barsa (Mechanical Lead, Engineering Physics), Natalie Duric (Outreach, Physics and Astronomy), Ian Mo (Outreach, Physics and Astronomy), Daniel Yu (Electrical, Computer Engineering), Lauren Altomare (Science, Biomedical Engineering), and Khaled (Support, Physics PhD student).</p>
+
+    </div>
+
+    <footer class="article-footer">
+      <a class="link-more" href="../projects.html"><span>&larr;</span> All projects</a>
+      <!-- the next project in content.js, linked automatically -->
+      <span data-field="next"></span>
+    </footer>
+
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <span>&copy; <span id="year">2026</span> Gabriel Caribé</span>
+    <span>Press <strong>F</strong> for fun mode</span>
+    <a href="../projects.html">More projects</a>
+  </div>
+</footer>
+
+<script src="../assets/js/space.js"></script>
+<script src="../assets/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
