@@ -832,7 +832,13 @@ p:last-child { margin-bottom: 0; }
   place-items: center;
 }
 
+/* the slot's box comes from its own aspect-ratio/height; the thumb is pinned
+   to it so the media inside has a definite box to contain itself in */
+.figure-placeholder { position: relative; }
+
 .figure-placeholder .thumb {
+  position: absolute;
+  inset: 0;
   aspect-ratio: auto;
   width: 100%;
   height: 100%;
