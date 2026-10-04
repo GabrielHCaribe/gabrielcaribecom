@@ -562,6 +562,8 @@ p:last-child { margin-bottom: 0; }
   aspect-ratio: 16 / 10;
   border-bottom: 1px solid var(--line);
   display: grid;
+  /* one cell exactly the thumb's size, so height: 100% on media resolves */
+  grid-template: 100% / 100%;
   place-items: center;
   overflow: hidden;
   border-radius: 0;
