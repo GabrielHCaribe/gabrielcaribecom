@@ -49,6 +49,11 @@ window.SITE_CONTENT = {
   /* appended to the tab title of every project and post page */
   titleSuffix: ' — GabrielCaribé.com',
 
+  /* TEMPORARY: true shows every post as "Coming soon" (cards and the
+     post pages themselves), keeping only the date. Set to false to put
+     the real titles, summaries and post bodies back. */
+  postsComingSoon: true,
+
   /* ------------------------------------------------------ projects */
   projects: [
 

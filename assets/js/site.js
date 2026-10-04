@@ -36,9 +36,17 @@
   var mySrc = (document.currentScript && document.currentScript.getAttribute('src')) || '';
   var BASE = mySrc.replace(/assets\/js\/site\.js.*$/, '');
 
+  /* postsComingSoon in content.js: every post keeps its slug, date and
+     tags but shows "Coming soon" in place of its title and text */
+  var COMING_SOON = 'Coming soon';
+  var posts = (data.posts || []).map(function (item) {
+    if (!data.postsComingSoon) return item;
+    return { slug: item.slug, date: item.date, tags: item.tags, featured: item.featured, title: COMING_SOON };
+  });
+
   var COLLECTIONS = {
     projects: { items: data.projects || [], dir: 'projects/', nextLabel: 'Next project' },
-    posts:    { items: data.posts    || [], dir: 'posts/',    nextLabel: 'Next post' }
+    posts:    { items: posts,               dir: 'posts/',    nextLabel: 'Next post' }
   };
 
   /* ------------------------------------------------------- helpers */
@@ -212,6 +220,13 @@
       /* an optional field with nothing to show leaves no empty slot */
       else if (field === 'readtime' || field === 'summary') node.remove();
     });
+
+    if (data.postsComingSoon && here.collection === 'posts') {
+      each(document.querySelectorAll('.prose'), function (node) {
+        node.textContent = '';
+        node.appendChild(el('p', 'lede', COMING_SOON + '.'));
+      });
+    }
   }
 
   /* ------------------------------------------------------------ go */
