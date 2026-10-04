@@ -50,8 +50,9 @@ window.SITE_CONTENT = {
   titleSuffix: ' — GabrielCaribé.com',
 
   /* TEMPORARY: true shows every post as "Coming soon" (cards and the
-     post pages themselves), keeping only the date. Set to false to put
-     the real titles, summaries and post bodies back. */
+     post pages themselves): the title gets " — Coming soon" appended,
+     the summary and body are hidden. Set to false to put the real
+     summaries and post bodies back. */
   postsComingSoon: true,
 
   /* ------------------------------------------------------ projects */
@@ -94,6 +95,15 @@ window.SITE_CONTENT = {
 
   /* --------------------------------------------------------- posts */
   posts: [
+
+    {
+      slug: 'eat-frogs',
+      title: 'How I Eat Frogs Everyday',
+      summary: 'Coming soon.',
+      date: 'October 04, 2026',
+      tags: ['Productivity'],
+      featured: true
+    },
 
     {
       slug: 'blue-ocean-company',

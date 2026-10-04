@@ -41,7 +41,7 @@
   var COMING_SOON = 'Coming soon';
   var posts = (data.posts || []).map(function (item) {
     if (!data.postsComingSoon) return item;
-    return { slug: item.slug, date: item.date, tags: item.tags, featured: item.featured, title: COMING_SOON };
+    return { slug: item.slug, date: item.date, tags: item.tags, featured: item.featured, title: item.title + ' — ' + COMING_SOON };
   });
 
   var COLLECTIONS = {
