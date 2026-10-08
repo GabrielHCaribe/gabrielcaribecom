@@ -52,7 +52,8 @@ window.SITE_CONTENT = {
   /* TEMPORARY: true shows every post as "Coming soon" (cards and the
      post pages themselves): the title gets " — Coming soon" appended,
      the summary and body are hidden. Set to false to put the real
-     summaries and post bodies back. */
+     summaries and post bodies back. A post with public: true is
+     always shown in full. */
   postsComingSoon: true,
 
   /* ------------------------------------------------------ projects */
@@ -111,7 +112,8 @@ window.SITE_CONTENT = {
       summary: 'Summary of the frameworks presented in Blue Ocean Strategy by W. Chan Kim and Renée Maes.',
       date: 'August 03, 2026',
       tags: ['Business'],
-      featured: true
+      featured: true,
+      public: true
     },
 
     {

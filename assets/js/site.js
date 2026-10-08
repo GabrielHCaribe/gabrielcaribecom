@@ -36,12 +36,12 @@
   var mySrc = (document.currentScript && document.currentScript.getAttribute('src')) || '';
   var BASE = mySrc.replace(/assets\/js\/site\.js.*$/, '');
 
-  /* postsComingSoon in content.js: every post keeps its slug, date and
-     tags but shows "Coming soon" in place of its title and text */
+  /* postsComingSoon in content.js: every post without public: true keeps
+     its slug, date and tags but shows "Coming soon" in place of its text */
   var COMING_SOON = 'Coming soon';
   var posts = (data.posts || []).map(function (item) {
-    if (!data.postsComingSoon) return item;
-    return { slug: item.slug, date: item.date, tags: item.tags, featured: item.featured, title: item.title + ' — ' + COMING_SOON };
+    if (!data.postsComingSoon || item.public) return item;
+    return { slug: item.slug, date: item.date, tags: item.tags, featured: item.featured, comingSoon: true, title: item.title + ' — ' + COMING_SOON };
   });
 
   var COLLECTIONS = {
@@ -221,7 +221,7 @@
       else if (field === 'readtime' || field === 'summary') node.remove();
     });
 
-    if (data.postsComingSoon && here.collection === 'posts') {
+    if (item.comingSoon) {
       each(document.querySelectorAll('.prose'), function (node) {
         node.textContent = '';
         node.appendChild(el('p', 'lede', COMING_SOON + '.'));
