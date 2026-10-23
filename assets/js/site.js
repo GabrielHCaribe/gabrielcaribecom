@@ -39,7 +39,15 @@
   /* postsComingSoon in content.js: every post without public: true keeps
      its slug, date and tags but shows "Coming soon" in place of its text */
   var COMING_SOON = 'Coming soon';
-  var posts = (data.posts || []).map(function (item) {
+  var allPosts = data.posts || [];
+
+  /* hideNonPublicPosts in content.js: every post without public: true
+     is left out completely, as if it had no entry */
+  function isHidden(item) {
+    return !!data.hideNonPublicPosts && !item.public;
+  }
+
+  var posts = allPosts.filter(function (item) { return !isHidden(item); }).map(function (item) {
     if (!data.postsComingSoon || item.public) return item;
     return { slug: item.slug, date: item.date, tags: item.tags, featured: item.featured, comingSoon: true, title: item.title + ' — ' + COMING_SOON };
   });
@@ -85,6 +93,16 @@
     for (var i = 0; i < items.length; i++) {
       if (String(items[i].slug).toLowerCase() === slug) {
         return { collection: collection, item: items[i], index: i };
+      }
+    }
+
+    /* a hidden post's page still exists, so send direct visits away */
+    if (collection === 'posts') {
+      for (var j = 0; j < allPosts.length; j++) {
+        if (String(allPosts[j].slug).toLowerCase() === slug && isHidden(allPosts[j])) {
+          location.replace(BASE + 'blog.html');
+          break;
+        }
       }
     }
     return null;

@@ -56,6 +56,14 @@ window.SITE_CONTENT = {
      always shown in full. */
   postsComingSoon: true,
 
+  /* TEMPORARY: true hides every post without public: true from the
+     site entirely — no card on the home page or blog.html, no
+     "Next post" link to it, and visiting its URL directly sends the
+     visitor to blog.html. Set to false to bring them all back (as
+     "Coming soon" while postsComingSoon is true), or add public: true
+     to a single post to bring back just that one. */
+  hideNonPublicPosts: true,
+
   /* ------------------------------------------------------ projects */
   projects: [
 
