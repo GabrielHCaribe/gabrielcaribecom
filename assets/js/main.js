@@ -71,7 +71,9 @@
           io.unobserve(entry.target);
         });
       },
-      { rootMargin: '0px 0px -12% 0px', threshold: 0.08 }
+      /* threshold 0, not a fraction: a long post body can be so tall that
+         even a small fraction of it never fits on screen, so it never shows */
+      { rootMargin: '0px 0px -12% 0px', threshold: 0 }
     );
 
     Array.prototype.forEach.call(reveals, function (el) {
